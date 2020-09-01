@@ -16,7 +16,7 @@ class PotterService
 
   def conn
     Faraday.new(url: 'https://www.potterapi.com/v1/') do |f|
-      f.params['key'] = '$2a$10$54uSgCZszjOE77dLaZlkFOBUy6ojFw5OLT0JyrlUVVjI7NG6l.UVi'
+      f.params['key'] = ENV['POTTER_API_KEY']
     end
   end
 end
