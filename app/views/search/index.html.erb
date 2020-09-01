@@ -1,0 +1,14 @@
+<h1>Search Results for: <%= @house %></h1>
+
+<p>Total number of the phoenix members that belong to <%= @house %>: <%= @members.size %></p>
+
+<ul class='house-members'>
+  <% @members.each do |member| %>
+    <h3 class='member'>Name: <%= member[:name] %></h3>
+    <ul>
+      <li class='role'><%= "Role: #{member[:role]}" if !member[:role].nil? %></li>
+      <li class='house'>House: <%= member[:house] %></li>
+      <li class='<patr></patr>'><%= "Patronus: #{member[:patronus]}" if !member[:patronus].nil? %></li>
+    </ul>
+  <% end %>
+</ul>
